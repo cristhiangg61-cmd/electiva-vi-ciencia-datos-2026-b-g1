@@ -8,7 +8,7 @@
 | **Docente** | Jesús Ariel González Bonilla |
 | **Actividad** | Taller en clase · Semana 9 (Corte 2 · ETL, paso de limpieza) |
 | **Fecha** | Octubre de 2026 |
-| **Carpeta de entrega** | `09-week/` |
+| **Carpeta de entrega** | `09-week/02-optional-activity/` |
 
 ---
 
@@ -73,8 +73,6 @@ Al aplicar la misma función de medición a la tabla limpia, las cinco dimension
 | Formato | 89,9 % | 100 % |
 | Validez | 80,8 % | 100 % |
 
-![Calidad de los datos antes y después de limpiar](img/calidad_antes_despues.png)
-
 ### 4. Respuesta a la pregunta de la gerencia
 
 Con los datos sucios, la M-01 aparecía como la peor máquina (5,93 % de defectos), inflada por tres filas con las columnas invertidas, mientras que la M-03 quedaba partida en varias etiquetas. Con los datos limpios el panorama cambia:
@@ -88,11 +86,7 @@ Con los datos sucios, la M-01 aparecía como la peor máquina (5,93 % de defecto
 
 La tasa de toda la planta es 2,21 %, así que la M-03 casi la duplica. Por turno, la tarde es la más crítica (2,69 %, frente a 2,05 % en la mañana y 1,88 % en la noche), y al cruzar máquina con turno se ve que el problema está en la **M-03 durante la tarde, con 6,45 %**, contra 3,47 % en la mañana y 2,97 % en la noche.
 
-![Tasa de defectos por máquina y turno](img/tasa_defectos_maquina_turno.png)
-
 La temperatura acompaña ese comportamiento: en la M-03 la correlación entre temperatura y tasa de defectos es de 0,81, mientras que en la M-01 es de −0,05, es decir, no hay relación. Además, los 13 atípicos de temperatura son todos de la M-03 y 12 ocurren en la tarde. Como la M-03 es también la más antigua (instalada en 2012), es razonable pensar en desgaste, aunque una correlación no prueba causalidad: es una pista de dónde investigar, no un diagnóstico cerrado.
-
-![Temperatura vs. tasa de defectos (M-01 y M-03)](img/temperatura_vs_defectos.png)
 
 ## Conclusión
 
@@ -106,21 +100,17 @@ Como recomendación operativa, la M-03 es la primera candidata a mantenimiento, 
 
 La entrega es dual, como en las semanas anteriores:
 
-- **GitHub:** fork del repositorio de la clase, carpeta `09-week/` (confirmar el nombre exacto de la carpeta antes de hacer el push).
+- **GitHub:** repositorio `electiva-vi-ciencia-datos-2026-b-g1`, carpeta `09-week/02-optional-activity/`.
 - **Moodle:** tarea "Taller en clase · Semana 9", con el archivo `.ipynb` adjunto y el enlace al repositorio.
 
 Estructura de la carpeta:
 
 ```text
-09-week/
+09-week/02-optional-activity/
 ├── README.md
 ├── taller-clase-calidad-datos.ipynb
 ├── registro_produccion.csv            # original, tal como llega (297 filas)
-├── registro_produccion_limpio.csv     # datos limpios (271 filas, 8 columnas)
-└── img/
-    ├── calidad_antes_despues.png
-    ├── tasa_defectos_maquina_turno.png
-    └── temperatura_vs_defectos.png
+└── registro_produccion_limpio.csv     # datos limpios (271 filas, 8 columnas)
 ```
 
 El archivo limpio conserva las 6 columnas originales y suma `temp_imputada` (marca las 6 temperaturas estimadas) y `tasa_defectos` (porcentaje de defectuosas de cada registro).
