@@ -1,0 +1,88 @@
+erDiagram
+    LINEA_PRODUCCION ||--o{ EQUIPO : "agrupa"
+    EQUIPO ||--o{ SENSOR : "tiene instalados"
+    TIPO_MEDICION ||--o{ SENSOR : "define variable y unidad"
+    SENSOR ||--o{ LECTURA_SENSOR : "genera"
+    EQUIPO ||--o{ FALLA : "presenta"
+    TIPO_FALLA ||--o{ FALLA : "clasifica"
+    EQUIPO ||--o{ PREDICCION_RIESGO : "es evaluado en"
+    EQUIPO ||--o{ ORDEN_MANTENIMIENTO : "recibe"
+    FALLA |o--o{ ORDEN_MANTENIMIENTO : "origina (correctivo)"
+    PREDICCION_RIESGO |o--o{ ORDEN_MANTENIMIENTO : "dispara (predictivo)"
+    ORDEN_MANTENIMIENTO ||--|{ ASIGNACION_TECNICO : "se reparte en"
+    TECNICO ||--o{ ASIGNACION_TECNICO : "participa en"
+
+    LINEA_PRODUCCION {
+        int id_linea PK
+        string nombre
+        string area
+    }
+    EQUIPO {
+        int id_equipo PK
+        int id_linea FK
+        string codigo
+        string tipo_equipo
+        string modelo
+        date fecha_instalacion
+    }
+    TIPO_MEDICION {
+        int id_tipo_medicion PK
+        string nombre
+        string unidad
+    }
+    SENSOR {
+        int id_sensor PK
+        int id_equipo FK
+        int id_tipo_medicion FK
+        string codigo_iot
+        date fecha_instalacion
+    }
+    LECTURA_SENSOR {
+        bigint id_lectura PK
+        int id_sensor FK
+        timestamptz fecha_hora
+        numeric valor
+    }
+    TIPO_FALLA {
+        int id_tipo_falla PK
+        string nombre
+        string descripcion
+        string severidad
+    }
+    FALLA {
+        int id_falla PK
+        int id_equipo FK
+        int id_tipo_falla FK
+        timestamptz fecha_inicio
+        timestamptz fecha_fin
+    }
+    PREDICCION_RIESGO {
+        int id_prediccion PK
+        int id_equipo FK
+        timestamptz fecha_calculo
+        numeric probabilidad_falla
+        string version_modelo
+    }
+    ORDEN_MANTENIMIENTO {
+        int id_orden PK
+        int id_equipo FK
+        int id_falla FK
+        int id_prediccion FK
+        string tipo_mantenimiento
+        string estado
+        date fecha_programada
+        date fecha_cierre
+        string ruta_informe
+    }
+    TECNICO {
+        int id_tecnico PK
+        string nombre
+        string especialidad
+        boolean activo
+    }
+    ASIGNACION_TECNICO {
+        int id_orden PK, FK
+        int id_tecnico PK, FK
+        string rol
+        numeric horas_trabajadas
+    }
