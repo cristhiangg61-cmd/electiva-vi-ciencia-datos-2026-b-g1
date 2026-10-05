@@ -7,6 +7,7 @@ Entrada : data/registro_produccion.csv         (original, NO se modifica)
 Salidas : data/registro_produccion_limpio.csv  (tabla limpia)
           data/bitacora_limpieza.csv           (qué se hizo en cada paso)
           data/antes_despues.csv               (comparación de calidad)
+          data/filas_imposibles.csv            (las filas descartadas en el Paso 6, con su motivo)
 
 Uso:  python limpieza_c2.py
 """
@@ -27,7 +28,14 @@ SENSOR_MIN, SENSOR_MAX = 15, 60   # rango del sensor en °C
 # 1. Funciones de medición (se usan ANTES y DESPUÉS, para que la comparación sea justa)
 # ---------------------------------------------------------------------------
 def reporte_calidad(tabla: pd.DataFrame) -> pd.Series:
-    """% de filas que cumple cada una de las cinco dimensiones de calidad."""
+    """% de filas que cumple cada una de las cinco dimensiones de calidad.
+
+    OJO con la Validez: se mide con las MISMAS reglas con las que el Paso 6 filtra,
+    así que el 100 % de "después" es cierto por construcción. La evidencia
+    independiente está en otro lado: (a) la base SQLite con CHECK acepta las 271
+    filas (consultas_c2.py) y (b) las lecturas convertidas de °F caen dentro del
+    rango de las que nunca se convirtieron (analisis_c2.py).
+    """
     prod = pd.to_numeric(tabla["producidas"], errors="coerce")
     defe = pd.to_numeric(tabla["defectuosas"], errors="coerce")
     temp = pd.to_numeric(tabla["temperatura"], errors="coerce")
@@ -142,11 +150,15 @@ registrar("Paso 4", "Convertir lecturas en °F a °C", len(limpio), len(limpio),
 antes = len(limpio)
 limpio = limpio.dropna(subset=["defectuosas"]).reset_index(drop=True)
 registrar("Paso 5a", "Eliminar filas sin dato de defectuosas", antes, len(limpio))
-#   5b. 'temperatura' es variable de apoyo -> se imputa con la mediana de su máquina y se marca.
+#   5b. 'temperatura' es variable de apoyo -> se imputa con la mediana de su MÁQUINA Y TURNO
+#       (la temperatura cambia mucho de un turno a otro: p. ej. M-03 tarde vs noche) y se marca.
+#       Si un grupo máquina-turno no tuviera ninguna lectura, se cae a la mediana de la máquina.
 limpio["temp_imputada"] = limpio["temperatura"].isna()
+mediana_mt = limpio.groupby(["maquina", "turno"])["temperatura"].transform("median")
 mediana_maq = limpio.groupby("maquina")["temperatura"].transform("median")
-limpio["temperatura"] = limpio["temperatura"].fillna(mediana_maq)
-registrar("Paso 5b", "Imputar temperatura con la mediana de su máquina",
+limpio["temperatura"] = limpio["temperatura"].fillna(mediana_mt).fillna(mediana_maq).round(1)  # 1 decimal, como el sensor
+assert limpio["temperatura"].isna().sum() == 0, "Quedaron temperaturas sin imputar"
+registrar("Paso 5b", "Imputar temperatura con la mediana de su máquina y turno",
           len(limpio), len(limpio), int(limpio["temp_imputada"].sum()))
 
 # Paso 6 · Valores imposibles (validez)
@@ -157,20 +169,37 @@ imposible = sobre_capacidad | invertidas | negativas
 print(f"\nImposibles -> sobre capacidad: {int(sobre_capacidad.sum())}, "
       f"invertidas: {int(invertidas.sum())}, negativas: {int(negativas.sum())}")
 antes = len(limpio)
+# Se guardan las filas descartadas (con su motivo) para poder auditar y para el
+# análisis de sensibilidad de analisis_c2.py: ¿cambia la conclusión si se corrigen?
+descartadas = limpio[imposible].copy()
+descartadas["motivo"] = "sobre capacidad"
+descartadas.loc[invertidas[imposible], "motivo"] = "columnas invertidas"
+descartadas.loc[negativas[imposible], "motivo"] = "defectuosas negativa"
+descartadas["fecha"] = descartadas["fecha"].dt.strftime("%Y-%m-%d")
+descartadas.to_csv(DATA / "filas_imposibles.csv", index=False)
 limpio = limpio[~imposible].reset_index(drop=True)
 limpio["producidas"] = limpio["producidas"].astype(int)
 limpio["defectuosas"] = limpio["defectuosas"].astype(int)
 registrar("Paso 6", "Eliminar filas que violan las reglas del negocio", antes, len(limpio))
 
-# Atípicos de temperatura: se identifican con IQR pero NO se eliminan (son reales)
-q1, q3 = limpio["temperatura"].quantile([0.25, 0.75])
-iqr = q3 - q1
-lim_inf, lim_sup = q1 - 1.5 * iqr, q3 + 1.5 * iqr
-atipicos = limpio[(limpio["temperatura"] < lim_inf) | (limpio["temperatura"] > lim_sup)]
-print(f"\nAtípicos de temperatura (IQR): {len(atipicos)} fuera de [{lim_inf:.1f}, {lim_sup:.1f}] °C "
-      f"| fuera del rango del sensor: {int((~atipicos['temperatura'].between(SENSOR_MIN, SENSOR_MAX)).sum())}")
-print("Atípicos por máquina:", atipicos["maquina"].value_counts().to_dict())
-print("Atípicos por turno  :", atipicos["turno"].value_counts().to_dict())
+# Atípicos de temperatura: se identifican con IQR pero NO se eliminan salvo que sean errores.
+# El IQR se calcula POR MÁQUINA: cada máquina trabaja a su propia temperatura, y un IQR
+# con las 4 juntas solo detecta que una máquina (la M-03) es más caliente que las demás.
+def limites_iqr(serie):
+    q1, q3 = serie.quantile([0.25, 0.75])
+    iqr = q3 - q1
+    return q1 - 1.5 * iqr, q3 + 1.5 * iqr
+
+print("\nAtípicos de temperatura (IQR por máquina):")
+for maq, g in limpio.groupby("maquina"):
+    lo, hi = limites_iqr(g["temperatura"])
+    fuera = g[(g["temperatura"] < lo) | (g["temperatura"] > hi)]
+    print(f"  {maq}: límites [{lo:.1f}, {hi:.1f}] °C -> {len(fuera)} atípicos "
+          f"| fuera del rango del sensor: {int((~fuera['temperatura'].between(SENSOR_MIN, SENSOR_MAX)).sum())}")
+lo, hi = limites_iqr(limpio["temperatura"])
+fuera_g = limpio[(limpio["temperatura"] < lo) | (limpio["temperatura"] > hi)]
+print(f"Comparación, IQR con las 4 máquinas juntas: [{lo:.1f}, {hi:.1f}] °C -> {len(fuera_g)} 'atípicos', "
+      f"por máquina: {fuera_g['maquina'].value_counts().to_dict()} (reflejan que la M-03 es más caliente, no errores)")
 
 # ---------------------------------------------------------------------------
 # 4. Medición (DESPUÉS) y guardado

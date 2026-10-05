@@ -1,0 +1,4 @@
+escenario,filas,tasa_M-01,tasa_M-02,tasa_M-03,tasa_M-04,maquina_mas_alta,M-03_tarde,M-03_mañana,M-03_noche,turno_mas_alto_M-03
+A. Eliminar las 7 (entrega),271,1.73,1.61,4.29,1.21,M-03,6.45,3.47,2.97,Tarde
+B. Corregir las 7,278,1.72,1.61,4.29,1.21,M-03,6.39,3.47,2.97,Tarde
+C. No filtrar (dejarlas tal cual),278,6.14,1.3,4.05,1.21,M-01,5.91,3.22,2.97,Tarde

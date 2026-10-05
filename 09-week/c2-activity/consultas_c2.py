@@ -51,6 +51,10 @@ con.commit()
 print("Filas cargadas en registro_produccion:", con.execute(
     "SELECT COUNT(*) FROM registro_produccion").fetchone()[0])
 print("Integridad referencial:", con.execute("PRAGMA foreign_key_check").fetchall() or "OK")
+# Verificación INDEPENDIENTE de la validez: las reglas del negocio viven en los CHECK de schema.sql,
+# no en el código de limpieza. Si alguna fila violara una regla, el INSERT habría fallado.
+assert con.execute("SELECT COUNT(*) FROM registro_produccion").fetchone()[0] == len(limpio)
+print(f"Validez verificada por la base: los CHECK aceptaron las {len(limpio)} filas (ninguna rechazada).")
 
 # ---------------------------------------------------------------- 2. Consultas SQL
 texto = (BASE / "consultas.sql").read_text(encoding="utf-8")
@@ -94,12 +98,16 @@ assert list(sql["P2"]["tasa_pct"]) == list(p2_pd["tasa_pct"])
 assert list(sql["P2"]["temp_media_c"]) == list(p2_pd["temp_media_c"])
 print("\nSQL y pandas coinciden en las dos preguntas.")
 
-# Apoyo para el hallazgo: correlación temperatura–tasa de defectos (solo lecturas medidas)
+# Apoyo para el hallazgo: correlación temperatura–tasa de defectos (solo lecturas medidas).
+# La global de la M-03 mezcla turnos, así que se muestra también DENTRO de cada turno.
+# (Los valores p y las pruebas de sensibilidad están en analisis_c2.py.)
 medidas = d[d["temp_imputada"] == 0].copy()
 medidas["tasa"] = medidas["defectuosas"] / medidas["producidas"] * 100
-for m in ["M-03", "M-01"]:
-    s = medidas[medidas["id_maquina"] == m]
-    print(f"Correlación temperatura–tasa de defectos en {m} (n={len(s)}): "
-          f"{s['temperatura_c'].corr(s['tasa']):.2f}")
+for m in ["M-01", "M-02", "M-03", "M-04"]:
+    s_ = medidas[medidas["id_maquina"] == m]
+    print(f"Correlación temperatura–tasa en {m} (n={len(s_)}): {s_['temperatura_c'].corr(s_['tasa']):.2f}")
+for t in ["Mañana", "Tarde", "Noche"]:
+    s_ = medidas[(medidas["id_maquina"] == "M-03") & (medidas["turno"] == t)]
+    print(f"  M-03 · {t:<6} (n={len(s_)}): {s_['temperatura_c'].corr(s_['tasa']):.2f}")
 
 con.close()

@@ -1,5 +1,5 @@
 fecha,turno,maquina,producidas,defectuosas,temperatura,temp_imputada
-2026-09-07,Mañana,M-02,1085,16,31.8,True
+2026-09-07,Mañana,M-02,1085,16,31.7,True
 2026-09-07,Mañana,M-03,1260,99,39.0,False
 2026-09-07,Mañana,M-04,1054,18,31.2,False
 2026-09-07,Tarde,M-01,1062,20,35.4,False
@@ -17,7 +17,7 @@ fecha,turno,maquina,producidas,defectuosas,temperatura,temp_imputada
 2026-09-08,Tarde,M-01,1217,22,36.6,False
 2026-09-08,Tarde,M-02,967,13,35.8,False
 2026-09-08,Tarde,M-03,1194,110,40.8,False
-2026-09-08,Tarde,M-04,1198,6,30.9,True
+2026-09-08,Tarde,M-04,1198,6,32.4,True
 2026-09-08,Noche,M-01,1114,17,33.4,False
 2026-09-08,Noche,M-02,1213,19,31.1,False
 2026-09-08,Noche,M-03,1065,37,33.6,False
@@ -120,7 +120,7 @@ fecha,turno,maquina,producidas,defectuosas,temperatura,temp_imputada
 2026-09-18,Tarde,M-03,1203,111,40.8,False
 2026-09-18,Tarde,M-04,1318,15,32.1,False
 2026-09-18,Noche,M-01,1096,17,30.8,False
-2026-09-18,Noche,M-02,1328,23,31.8,True
+2026-09-18,Noche,M-02,1328,23,30.6,True
 2026-09-18,Noche,M-03,1361,38,32.0,False
 2026-09-18,Noche,M-04,1083,3,29.7,False
 2026-09-19,Mañana,M-01,1032,13,31.7,False
@@ -163,7 +163,7 @@ fecha,turno,maquina,producidas,defectuosas,temperatura,temp_imputada
 2026-09-23,Tarde,M-01,1256,21,34.3,False
 2026-09-23,Tarde,M-02,1217,21,32.9,False
 2026-09-23,Tarde,M-04,1003,8,32.8,False
-2026-09-23,Noche,M-01,1230,22,32.7,True
+2026-09-23,Noche,M-01,1230,22,31.1,True
 2026-09-23,Noche,M-03,1083,30,29.2,False
 2026-09-23,Noche,M-04,1412,11,29.4,False
 2026-09-24,Mañana,M-01,1083,21,32.6,False
@@ -172,7 +172,7 @@ fecha,turno,maquina,producidas,defectuosas,temperatura,temp_imputada
 2026-09-24,Tarde,M-01,1486,19,35.3,False
 2026-09-24,Tarde,M-02,1053,13,33.7,False
 2026-09-24,Tarde,M-03,1156,84,39.3,False
-2026-09-24,Tarde,M-04,1274,22,30.9,True
+2026-09-24,Tarde,M-04,1274,22,32.4,True
 2026-09-24,Noche,M-01,1194,20,32.4,False
 2026-09-24,Noche,M-02,1232,23,31.7,False
 2026-09-24,Noche,M-03,1294,39,31.7,False

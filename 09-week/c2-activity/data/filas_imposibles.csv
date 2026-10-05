@@ -1,0 +1,8 @@
+fecha,turno,maquina,producidas,defectuosas,temperatura,temp_imputada,motivo
+2026-09-10,Noche,M-01,16,959.0,32.3,False,columnas invertidas
+2026-09-15,Tarde,M-02,11320,16.0,33.7,False,sobre capacidad
+2026-09-19,Mañana,M-03,984,-35.0,34.4,False,defectuosas negativa
+2026-09-21,Mañana,M-01,25,1303.0,32.6,False,columnas invertidas
+2026-09-23,Tarde,M-03,1299,-67.0,37.7,False,defectuosas negativa
+2026-09-23,Noche,M-02,10770,19.0,29.9,False,sobre capacidad
+2026-09-29,Noche,M-01,18,1295.0,32.2,False,columnas invertidas

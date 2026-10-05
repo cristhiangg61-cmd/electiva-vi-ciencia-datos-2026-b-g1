@@ -1,8 +1,13 @@
 -- =====================================================================
 -- c2-activity · Modelo relacional del caso (SQLite)
 -- Planta de empaques: 2 líneas · 4 máquinas · 3 turnos
--- Las reglas del negocio quedan escritas como restricciones CHECK,
--- de modo que la base de datos rechaza por sí sola los valores imposibles.
+-- Las reglas numéricas del negocio (capacidad, rango de defectuosas, rango del
+-- sensor) quedan como restricciones CHECK; que solo existan 4 máquinas y 3 turnos
+-- lo garantizan las llaves foráneas (no hace falta repetirlo con un CHECK).
+--
+-- Llaves: id_maquina es una llave NATURAL (texto 'M-03') porque es el código que
+-- ya usa la planta y aparece en el registro; linea y turno usan llaves SUSTITUTAS
+-- enteras porque no traen un código propio en el dataset.
 -- =====================================================================
 PRAGMA foreign_keys = ON;
 
@@ -13,8 +18,7 @@ CREATE TABLE linea (
 );
 
 CREATE TABLE maquina (
-    id_maquina        TEXT    PRIMARY KEY
-                      CHECK (id_maquina IN ('M-01','M-02','M-03','M-04')),
+    id_maquina        TEXT    PRIMARY KEY,         -- 'M-01'...'M-04' (llave natural)
     nombre            TEXT    NOT NULL,            -- 'Extrusora A', ...
     id_linea          INTEGER NOT NULL REFERENCES linea(id_linea),
     anio_instalacion  INTEGER NOT NULL
@@ -22,9 +26,10 @@ CREATE TABLE maquina (
 
 CREATE TABLE turno (
     id_turno  INTEGER PRIMARY KEY,
-    nombre    TEXT    NOT NULL UNIQUE
-              CHECK (nombre IN ('Mañana','Tarde','Noche'))
+    nombre    TEXT    NOT NULL UNIQUE              -- 'Mañana', 'Tarde', 'Noche'
 );
+-- TURNO queda con id y nombre a propósito: el dataset no trae horarios ni
+-- supervisor, y no se inventan atributos que no se pueden llenar.
 
 -- Entidad asociativa: una máquina trabaja muchos turnos y un turno
 -- cubre muchas máquinas (N:M) -> se resuelve con un registro por
