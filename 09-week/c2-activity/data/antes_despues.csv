@@ -1,0 +1,15 @@
+indicador,antes,despues
+Filas,297,271
+Celdas vacías (nulos),16,0
+Filas con algún vacío,16,0
+Filas duplicadas,9,0
+Valores distintos en 'maquina' (esperado 4),16,4
+Valores distintos en 'turno' (esperado 3),12,3
+Fechas fuera de aaaa-mm-dd,30,0
+Tipo de 'temperatura',texto,numérico
+Tipo de 'fecha',texto,fecha
+Calidad · Completitud (%),94.6,100.0
+Calidad · Unicidad (%),97.0,100.0
+Calidad · Consistencia (%),88.9,100.0
+Calidad · Formato (%),89.9,100.0
+Calidad · Validez (%),80.8,100.0

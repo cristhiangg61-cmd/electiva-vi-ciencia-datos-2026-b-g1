@@ -1,0 +1,8 @@
+paso,accion,filas_antes,filas_despues,filas_eliminadas,valores_corregidos
+Paso 1,Quitar filas duplicadas,297,288,9,0
+Paso 2,Homologar máquinas y turnos,288,288,0,33
+Paso 3,Temperatura a número y fechas a un solo formato,288,288,0,50
+Paso 4,Convertir lecturas en °F a °C,288,288,0,14
+Paso 5a,Eliminar filas sin dato de defectuosas,288,278,10,0
+Paso 5b,Imputar temperatura con la mediana de su máquina,278,278,0,6
+Paso 6,Eliminar filas que violan las reglas del negocio,278,271,7,0
