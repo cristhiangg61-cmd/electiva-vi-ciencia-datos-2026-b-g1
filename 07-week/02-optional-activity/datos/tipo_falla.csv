@@ -1,0 +1,5 @@
+id_tipo_falla,nombre,descripcion,severidad
+1,Rodamiento desgastado,Desgaste de rodamientos,alta
+2,Sobrecalentamiento,Temperatura sobre el límite,media
+3,Desalineación,Eje desalineado,media
+4,Falla eléctrica,Fallo en bobinado o variador,alta

@@ -1,0 +1,39 @@
+Tablas cargadas: linea_produccion=3, tipo_medicion=2, tipo_falla=4, tecnico=4, equipo=6, sensor=12, lectura_sensor=60, falla=9, prediccion_riesgo=12, orden_mantenimiento=7, asignacion_tecnico=11
+✔ Integridad: FK compuesta rechazó orden/falla de equipos distintos (FOREIGN KEY constraint failed)
+
+=== Consulta 1 · WHERE ===
+ id_prediccion  id_equipo       fecha_calculo  probabilidad_falla
+             6          3 2026-09-29 23:00:00                0.91
+            12          6 2026-09-29 23:00:00                0.78
+
+=== Consulta 2 · JOIN ===
+ id_orden    equipo tipo_mantenimiento     estado       tecnico      rol  horas_trabajadas
+        1 COM-B-003         correctivo    cerrada  Andrés Mejía ejecutor              12.0
+        1 COM-B-003         correctivo    cerrada Laura Perdomo    apoyo               6.0
+        2 MEZ-C-006         correctivo    cerrada  Camilo Rojas ejecutor               9.5
+        3 MOT-C-005         correctivo    cerrada Laura Perdomo ejecutor               7.0
+        3 MOT-C-005         correctivo    cerrada Diana Cuéllar    apoyo               3.5
+        4 MOT-A-001         preventivo    cerrada  Andrés Mejía ejecutor               2.5
+        5 COM-B-003         predictivo programada  Andrés Mejía ejecutor               NaN
+        5 COM-B-003         predictivo programada  Camilo Rojas    apoyo               NaN
+        6 MEZ-C-006         predictivo en_proceso  Camilo Rojas ejecutor               5.0
+        6 MEZ-C-006         predictivo en_proceso Laura Perdomo    apoyo               4.0
+        7 BOM-A-002         correctivo en_proceso Laura Perdomo ejecutor               6.0
+
+=== Consulta 3 · GROUP BY (SQL) ===
+   equipo  n_fallas  n_abiertas        ultima_falla
+COM-B-003         3           0 2026-08-19 07:00:00
+MEZ-C-006         2           0 2026-07-08 08:15:00
+MOT-C-005         2           0 2026-09-05 11:00:00
+BOM-A-002         1           1 2026-10-01 07:45:00
+MOT-A-001         1           0 2026-06-21 13:00:00
+
+=== Consulta 3 · GROUP BY (pandas) ===
+   equipo  n_fallas  n_abiertas        ultima_falla
+COM-B-003         3           0 2026-08-19 07:00:00
+MEZ-C-006         2           0 2026-07-08 08:15:00
+MOT-C-005         2           0 2026-09-05 11:00:00
+BOM-A-002         1           1 2026-10-01 07:45:00
+MOT-A-001         1           0 2026-06-21 13:00:00
+
+✔ Verificación: el resultado de SQL y el de pandas son idénticos.

@@ -1,0 +1,7 @@
+id_equipo,id_linea,codigo,tipo_equipo,modelo,fecha_instalacion
+1,1,MOT-A-001,motor,Trifásico 11 kW,2021-03-15
+2,1,BOM-A-002,bomba,Centrífuga 15 kW,2020-07-02
+3,2,COM-B-003,compresor,Tornillo 37 kW,2019-11-20
+4,2,MOT-B-004,motor,Trifásico 7.5 kW,2022-01-10
+5,3,MOT-C-005,motor,Trifásico 55 kW,2018-05-28
+6,3,MEZ-C-006,mezcladora,Industrial 22 kW,2019-02-14

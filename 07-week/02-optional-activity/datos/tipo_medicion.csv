@@ -1,0 +1,3 @@
+id_tipo_medicion,nombre,unidad
+1,temperatura,°C
+2,vibracion,mm/s
