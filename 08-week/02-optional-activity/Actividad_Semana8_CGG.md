@@ -177,8 +177,6 @@ pip install requests
 python api_clima.py
 ```
 
-(El script `ejecutar_y_entregar.ps1` hace esto, corre las pruebas y pega la salida real en este bloque; el detalle está en el `README.md`.)
-
 **Salida de la ejecución (3 registros):**
 
 ```text
