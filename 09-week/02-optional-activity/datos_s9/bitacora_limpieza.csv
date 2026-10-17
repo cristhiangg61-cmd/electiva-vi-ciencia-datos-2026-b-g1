@@ -1,0 +1,8 @@
+paso,accion,filas_antes,filas_despues,valores_corregidos,nota
+1,"Normalizar texto (strip, mayúsculas, acentos, sinónimos)",379,379,304,"equipo, tipo_medicion, unidad, turno"
+2,Tipos: fecha_hora a datetime y valor a número (coma decimal),379,379,147,"89 fechas dd/mm/aaaa, 58 valores con coma"
+3,"Quitar duplicados por clave (fecha_hora, equipo, tipo_medicion)",379,360,0,13 exactos en el crudo + 6 que solo se ven tras normalizar
+4,"Imputar por regla: unidad (desde tipo), tipo (desde unidad), turno (desde la hora)",360,360,35,"unidad 12, tipo 8, turno 15"
+5,Eliminar filas sin valor medido,360,348,0,la medida no se imputa
+6,Convertir °F a °C: (°F − 32) × 5/9,348,348,12,unidad declarada en la fila
+7,Apartar valores imposibles (fuera del rango físico del sensor),348,338,0,"temperatura 0–150 °C, vibración 0–50 mm/s"

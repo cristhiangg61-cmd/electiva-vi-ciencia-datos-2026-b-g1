@@ -1,0 +1,380 @@
+fecha_hora,equipo,tipo_medicion,valor,unidad,turno
+2026-09-21 02:00:00,MOT-A-001,TEMP,"63,3",°C,Noche
+2026-09-21 02:00:00,MOT-A-001,vibracion,2.6,mm/s,NOCHE
+2026-09-21 02:00:00, BOM-A-002,temperatura ,52.03,°C,Noche
+2026-09-21 02:00:00,BOM-A-002,vibracion,3.06,mm/s,Noche
+2026-09-21 02:00:00,COM-B-003,Temperatura,74.85,°C,noche
+2026-09-21 02:00:00, COM-B-003,vibracion,4.91,mm/s,Noche
+2026-09-21 02:00:00,MOT-B-004,temperatura,-40,°C,Noche
+2026-09-21 02:00:00,MOT-B-004,vibracion,2.01,mm/s,
+2026-09-21 02:00:00,MOT-C-005,temperatura,-40,°C,Noche
+21/09/2026 02:00,MOT-C-005,vibracion,2.59,mm/s,Noche
+2026-09-21 02:00:00,mez-c-006,TEMP,"57,69",°C,Noche
+2026-09-21 02:00:00,MEZ-C-006,,3.18,MM/S,Noche
+21/09/2026 10:00,mot-a-001,temperatura,"62,01",°C,Mañana
+21/09/2026 10:00,MOT-A-001,vibr,--,mm/s,Mañana
+2026-09-21 10:00:00, BOM-A-002,temperatura,55.13,°C,Mañana
+2026-09-21 10:00:00, BOM-A-002,vibracion,3.44,mm/seg,Mañana
+2026-09-21 10:00:00,COM-B-003,temperatura,"76,12",°C,Mañana
+2026-09-21 10:00:00,COM-B-003,vibracion,480,mm/s,Mañana
+21/09/2026 10:00,MOT-B-004,temperatura,"57,38",C,MAÑANA
+21/09/2026 10:00,mot-b-004,vibr,2.34,mm/s,Mañana
+21/09/2026 10:00,MOT-C-005,temperatura,65.1,°C,Mañana
+2026-09-21 10:00:00,MOT-C-005,vibracion,2.55,mm/s,Mañana
+2026-09-21 10:00:00,MEZ-C-006,temperatura ,58.28,°C,Mañana
+2026-09-21 10:00:00,MEZ-C-006 ,vibracion,3.78,mm/s,Mañana
+2026-09-21 18:00:00,mot-a-001,TEMP,65.43,°C,Tarde
+21/09/2026 18:00,MOT_A_001,vibracion,2.33,mm/s,Tarde
+21/09/2026 18:00,mot_a_001,vibracion,2.33,mm/s,Tarde
+21/09/2026 18:00,BOM-A-002,temperatura,"57,03",°C,Tarde
+2026-09-21 18:00:00,BOM_A_002,vibr,2.16,MM/S,
+2026-09-21 18:00:00,COM-B-003,temperatura,"73,4",°C,tarde
+2026-09-21 18:00:00,COM-B-003,vibracion,"4,79",mm/s,Tarde
+2026-09-21 18:00:00,MOT-B-004,temperatura,58.97,°C,Tarde
+2026-09-21 18:00:00,MOT-B-004,vibracion,2.47,mm/s,Tarde
+2026-09-21 18:00:00,MOT-C-005,temperatura,65.57,°C,Tarde
+2026-09-21 18:00:00,MOT-C-005 ,Vibración,3.17,mm/s,Tarde
+2026-09-21 18:00:00,MEZ-C-006,temperatura,59.67,°C,
+2026-09-21 18:00:00,MEZ-C-006,vibr,3.33,mm/s,Tarde
+2026-09-22 02:00:00,MOT-A-001,temperatura ,61.7,°C,noche
+2026-09-22 02:00:00,MOT-A-001,vibr,2.37,mm/s,Noche
+2026-09-22 02:00:00,BOM-A-002,temperatura ,999,°C,Noche
+2026-09-22 02:00:00,BOMA002,vibracion,2.87,mm/s,Noche
+2026-09-22 02:00:00,COM-B-003,temperatura,73.56,,Noche
+2026-09-22 02:00:00,COM-B-003,vibracion,5.07,,Noche
+2026-09-22 02:00:00,MOT-B-004,temperatura ,58.49,°C,Noche
+2026-09-22 02:00:00,MOT-B-004,vibracion,2.05,mm/s,Noche
+2026-09-22 02:00:00,MOT-B-004,vibracion,2.05,mm/s,Noche
+22/09/2026 02:00,MOT-C-005 ,temperatura,67.33,°C,NOCHE
+2026-09-22 02:00:00,MOTC005,vibr,3.1,mm/s,Noche
+22/09/2026 02:00,MEZ-C-006,Temperatura,58.0,°C,Noche
+2026-09-22 02:00:00,MEZ-C-006,,3.26,mm/s,Noche
+22/09/2026 10:00,MOT-A-001,temperatura,58.66,°C,Mañana
+2026-09-22 10:00:00,mot-a-001,vibracion,2.43,mm/s,Mañana
+2026-09-22 10:00:00,BOM-A-002,temperatura,54.92,°C,Mañana
+2026-09-22 10:00:00,BOM-A-002,vibracion,3.36,mm/s,Mañana
+2026-09-22 10:00:00,COM-B-003,temperatura,76.43,°C,
+2026-09-22 10:00:00,COM-B-003,vibracion,4.82,mm/s,Mañana
+2026-09-22 10:00:00,MOT-B-004,TEMP,59.66,°C,Mañana
+2026-09-22 10:00:00,MOT-B-004,vibracion,"2,19",mm/s,Mañana
+2026-09-22 10:00:00,MOT-C-005,temperatura,66.13,C,MAÑANA
+2026-09-22 10:00:00,MOT-C-005,vibracion,"3,03",mm/s,Mañana
+2026-09-22 10:00:00,MEZ_C_006,temperatura,"60,23",°C,Mañana
+2026-09-22 10:00:00,MEZ_C_006,vibracion,3.72,mm/s,Mañana
+2026-09-22 18:00:00,MOT-A-001,temperatura,62.53,°C,Tarde
+2026-09-22 18:00:00,MOT-A-001,vibracion,2.32,mm/s,Tarde
+2026-09-22 18:00:00,MOT-A-001,vibracion,2.32,mm/s,Tarde
+22/09/2026 18:00, BOM-A-002,TEMP,53.78,,Tarde
+2026-09-22 18:00:00,BOM-A-002,vibracion,N/A,mm/s,Tarde
+2026-09-22 18:00:00,COM-B-003,temperatura ,73.83,°C,Tarde
+2026-09-22 18:00:00,COM-B-003,temperatura ,73.83,°C,Tarde
+2026-09-22 18:00:00,COM-B-003,vibracion,4.97,mm/s,Tarde
+2026-09-22 18:00:00,MOT-B-004,Temperatura,142.9,°F,TARDE
+22/09/2026 18:00,MOT-B-004,vibracion,1.97,mm/s,Tarde
+22/09/2026 18:00,mot-b-004,vibracion,1.97,mm/s,Tarde
+2026-09-22 18:00:00, MOT-C-005,temperatura,64.37,°C,Tarde
+2026-09-22 18:00:00,MOT-C-005,vibracion,2.98,MM/S,
+22/09/2026 18:00,MEZ-C-006,temperatura,62.0,°C,Tarde
+22/09/2026 18:00,MEZ-C-006,vibr,3.28,MM/S,Tarde
+23/09/2026 02:00,MOT-A-001 ,temperatura,60.16,°c,Noche
+2026-09-23 02:00:00,MOT-A-001,vibracion,"2,31",mm/s,Noche
+2026-09-23 02:00:00,BOM-A-002,temperatura,54.38,°C,Noche
+2026-09-23 02:00:00,BOM-A-002,VIBRACION,2.91,mm/s,Noche
+2026-09-23 02:00:00,COM-B-003,temperatura,169.4,°F,Noche
+2026-09-23 02:00:00,COM-B-003,Vibración,4.82,,Noche
+2026-09-23 02:00:00,MOT_B_004,temperatura ,56.91,°C,Noche
+2026-09-23 02:00:00,MOT-B-004,vibracion,2.27,mm/seg,
+2026-09-23 02:00:00,MOT-C-005,temperatura,64.86,°C,Noche
+2026-09-23 02:00:00,MOT-C-005,vibr,2.99,mm/s,Noche
+23/09/2026 02:00,MEZ-C-006,temperatura,57.95,,Noche
+2026-09-23 02:00:00,MEZ-C-006,vibracion,3.66,mm/s,Noche
+2026-09-23 10:00:00,MOT-A-001,temperatura ,60.87,°C,Mañana
+2026-09-23 10:00:00, MOT-A-001,vibracion,2.12,mm/s,Mañana
+2026-09-23 10:00:00,BOM-A-002,TEMP,53.24,°C,Mañana
+2026-09-23 10:00:00,BOM-A-002,vibracion,3.18,mm/s,Mañana
+2026-09-23 10:00:00,COM-B-003,temperatura,72.42,°C,Mañana
+23/09/2026 10:00,COM-B-003,vibracion,5.14,mm/s,Mañana
+2026-09-23 10:00:00,MOT-B-004,temperatura,59.89,°C,Mañana
+2026-09-23 10:00:00,MOT-B-004,VIBRACION,2.49,mm/s,Mañana
+23/09/2026 10:00,MOT-C-005,Temperatura,145.8,°F, Mañana
+2026-09-23 10:00:00,MOT-C-005,vibracion,2.87,mm/seg,Mañana
+2026-09-23 10:00:00,MEZ-C-006,temperatura,58.68,°C,Mañana
+2026-09-23 10:00:00,MEZ-C-006,Vibración,"3,3",mm/s,Mañana
+23/09/2026 10:00,mez-c-006,Vibración,"3,3",mm/s,Mañana
+2026-09-23 18:00:00,mot-a-001,temperatura,64.36,°c,Tarde
+2026-09-23 18:00:00,mot-a-001,temperatura,64.36,°c,Tarde
+2026-09-23 18:00:00,MOT-A-001,vibracion,2.14,MM/S,TARDE
+23/09/2026 18:00,BOM-A-002,TEMP,128.6,°F,Tarde
+2026-09-23 18:00:00,BOM-A-002,vibracion,"3,61",mm/s,tarde
+23/09/2026 18:00,com-b-003,Temperatura,N/A,°C, Tarde
+23/09/2026 18:00,com-b-003,Temperatura,N/A,°C, Tarde
+23/09/2026 18:00, COM-B-003,vibracion,5.32,mm/s,Tarde
+2026-09-23 18:00:00,MOT-B-004,Temperatura,60.39,C,Tarde
+2026-09-23 18:00:00,MOT-B-004,vibracion,480,mm/s, Tarde
+2026-09-23 18:00:00,MOT-C-005 ,temperatura,62.28,C,tarde
+2026-09-23 18:00:00,MOTC005,vibr,--,mm/s,tarde
+2026-09-23 18:00:00,MEZ-C-006,temperatura,60.82,°C,Tarde
+2026-09-23 18:00:00,MEZ-C-006,,3.5,mm/s,Tarde
+2026-09-24 02:00:00,MOT-A-001,temperatura,61.46,°C,noche
+2026-09-24 02:00:00,MOT-A-001,VIBRACION,"2,41",mm/s,Noche
+24/09/2026 02:00,BOM-A-002,temperatura,54.82,°C,Noche
+2026-09-24 02:00:00,BOM-A-002,vibracion,3.39,mm/s,Noche
+2026-09-24 02:00:00,COM-B-003,temperatura,"78,74",°C,Noche
+2026-09-24 02:00:00,COM-B-003,temperatura,"78,74",°C,Noche
+2026-09-24 02:00:00,COM-B-003,vibracion,5.49,mm/s,Noche
+2026-09-24 02:00:00,MOT-B-004,temperatura,137.5,°F,Noche
+2026-09-24 02:00:00,MOT-B-004,vibr,2.34,mm/s,Noche
+2026-09-24 02:00:00,MOT-C-005,temperatura,66.03,°C,Noche
+2026-09-24 02:00:00,MOT-C-005,vibr,2.9,mm/seg,Noche
+2026-09-24 02:00:00,MEZ-C-006,temperatura,54.96,C,Noche
+2026-09-24 02:00:00,MEZ-C-006,vibracion,3.32,mm/s, Noche
+2026-09-24 10:00:00, MOT-A-001,,64.31,°C,mañana
+2026-09-24 10:00:00,MOT-A-001,vibracion,2.62,mm/s,Mañana
+24/09/2026 10:00,BOM-A-002,temperatura,55.03,°C,Mañana
+24/09/2026 10:00,BOM-A-002,vibracion,3.45,mm/s,mañana
+2026-09-24 10:00:00,com-b-003,TEMP,170.1,°F,Mañana
+2026-09-24 10:00:00,COM-B-003 ,vibracion,"4,62",mm/s,Mañana
+24/09/2026 10:00,mot-b-004,temperatura,58.96,C,Mañana
+2026-09-24 10:00:00,MOT-B-004,Vibración,1.89,mm/s,MAÑANA
+2026-09-24 10:00:00,MOT-C-005,temperatura,66.73,,Mañana
+2026-09-24 10:00:00,mot-c-005,vibracion,480,mm/s,Mañana
+2026-09-24 10:00:00,MEZ-C-006,temperatura,999,°C,Mañana
+2026-09-24 10:00:00,MEZ-C-006,vibracion,3.39,mm/s,Mañana
+2026-09-24 18:00:00,MOT-A-001,temperatura,63.66,C,Tarde
+24/09/2026 18:00,MOT-A-001,vibracion,2.31,mm/s,Tarde
+2026-09-24 18:00:00,BOM-A-002,temperatura,54.85,°C,Tarde
+2026-09-24 18:00:00,BOM-A-002,vibr,2.97,mm/s,Tarde
+2026-09-24 18:00:00, COM-B-003,temperatura,"77,04",ºC,Tarde
+2026-09-24 18:00:00,COM-B-003,vibracion,5.58,mm/seg,Tarde
+24/09/2026 18:00,MOT-B-004,temperatura,"62,96",°C,Tarde
+24/09/2026 18:00,MOT-B-004,vibracion,2.07,mm/seg,Tarde
+2026-09-24 18:00:00,MOT-C-005,Temperatura,65.37,ºC,Tarde
+2026-09-24 18:00:00,MOT-C-005,Temperatura,65.37,ºC,Tarde
+24/09/2026 18:00,MOT-C-005,,2.9,mm/s,tarde
+2026-09-24 18:00:00,MEZ-C-006 ,temperatura,56.28,°C,Tarde
+2026-09-24 18:00:00,MEZ-C-006,VIBRACION,3.09,mm/s,Tarde
+2026-09-25 02:00:00,MOT-A-001,temperatura ,"62,69",°C,Noche
+2026-09-25 02:00:00,mot-a-001,vibracion,1.86,mm/s,Noche
+2026-09-25 02:00:00,BOM-A-002,temperatura,54.47,°C,Noche
+25/09/2026 02:00,BOM-A-002,vibracion,3.34,mm/s,Noche
+2026-09-25 02:00:00,COM-B-003,temperatura,78.25,°C,Noche
+2026-09-25 02:00:00,COM-B-003,vibr,5.12,mm/s,Noche
+2026-09-25 02:00:00,MOT-B-004,temperatura,"60,08",°C,Noche
+2026-09-25 02:00:00,MOT-B-004,vibracion,2.24,mm/s,Noche
+2026-09-25 02:00:00,MOT-C-005,Temperatura,"68,47",°C,Noche
+25/09/2026 02:00,mot-c-005,Temperatura,"68,47",°C,Noche
+2026-09-25 02:00:00,MOT_C_005,vibracion,3.22,mm/s,Noche
+2026-09-25 02:00:00,MEZ-C-006,temperatura,59.31,°C,Noche
+2026-09-25 02:00:00,MEZ-C-006,VIBRACION,3.67,mm/s,Noche
+25/09/2026 10:00,MOT-A-001,temperatura,60.45,°C,Mañana
+2026-09-25 10:00:00,MOT-A-001,vibracion,2.74,mm/s,Mañana
+2026-09-25 10:00:00,BOM-A-002,Temperatura,56.77,°c,Mañana
+2026-09-25 10:00:00,bom-a-002,vibracion,3.15,mm/s,Mañana
+2026-09-25 10:00:00,COM-B-003,Temperatura,77.0,°C,Mañana
+2026-09-25 10:00:00,COM-B-003,vibracion,5.59,mm/s,Mañana
+2026-09-25 10:00:00,MOT-B-004,temperatura,59.65,°C, Mañana
+25/09/2026 10:00,MOT-B-004,vibracion,2.31,mm/s,
+2026-09-25 10:00:00,MOT-C-005,temperatura,67.85,°C,Mañana
+2026-09-25 10:00:00,MOT-C-005,vibracion,2.8,mm/seg,Mañana
+2026-09-25 10:00:00,MEZ-C-006,TEMP,58.29,°C,Mañana
+2026-09-25 10:00:00,MEZ-C-006,vibracion,3.46,mm/s, Mañana
+2026-09-25 18:00:00,MOT-A-001,temperatura,60.41,°C,Tarde
+25/09/2026 18:00,MOT-A-001,Vibración,2.37,mm/s,Tarde
+2026-09-25 18:00:00,BOM-A-002,temperatura,53.95,°C,Tarde
+25/09/2026 18:00,BOM-A-002,vibracion,3.39,mm/s,Tarde
+25/09/2026 18:00,COM-B-003,temperatura,77.35,°C,Tarde
+2026-09-25 18:00:00,COM_B_003,vibr,5.31,mm/s,Tarde
+2026-09-25 18:00:00,mot-b-004,temperatura,--,°C,Tarde
+25/09/2026 18:00,MOT-B-004,vibracion,"2,3",mm/s,TARDE
+25/09/2026 18:00,MOT-C-005,temperatura,66.4,°C,Tarde
+2026-09-25 18:00:00,MOT-C-005,vibracion,2.86,mm/s,Tarde
+2026-09-25 18:00:00,MEZ-C-006,temperatura,55.25,°C,Tarde
+2026-09-25 18:00:00,MEZ-C-006,,3.47,mm/s,Tarde
+2026-09-26 02:00:00,MOT-A-001,temperatura,"59,6",°C,Noche
+2026-09-26 02:00:00,MOT-A-001,vibracion,--,mm/s,Noche
+2026-09-26 02:00:00,BOM-A-002,Temperatura,55.89,°C,Noche
+2026-09-26 02:00:00,BOM-A-002,vibracion,3.46,mm/s,Noche
+26/09/2026 02:00, COM-B-003,temperatura,"79,07",°C,Noche
+2026-09-26 02:00:00,COMB003,vibracion,5.46,mm/s,Noche
+2026-09-26 02:00:00,MOTB004,temperatura,57.41,°C,Noche
+2026-09-26 02:00:00,mot-b-004,vibracion,2.12,,Noche
+2026-09-26 02:00:00,MOT-C-005,TEMP,62.26,°C,Noche
+2026-09-26 02:00:00,MOT-C-005,vibracion,2.83,mm/s,Noche
+26/09/2026 02:00,MEZ_C_006,temperatura,59.54,°C,Noche
+2026-09-26 02:00:00, MEZ-C-006,vibracion,4.01,mm/s,Noche
+2026-09-26 10:00:00,MOT-A-001,temperatura,141.4,°F,MAÑANA
+2026-09-26 10:00:00,MOT-A-001 ,vibr,2.57,mm/s,Mañana
+2026-09-26 10:00:00,BOM-A-002,temperatura,54.48,°C,Mañana
+2026-09-26 10:00:00,BOM-A-002,vibracion,3.15,mm/s,Mañana
+2026-09-26 10:00:00,COM_B_003,temperatura,"78,03",°C,Mañana
+2026-09-26 10:00:00,COM-B-003,vibr,5.77,mm/s,Mañana
+2026-09-26 10:00:00,MOT-B-004,Temperatura,59.85,°c,Manana
+2026-09-26 10:00:00,MOT-B-004,vibr,2.49,mm/s,mañana
+2026-09-26 10:00:00,MOT-C-005,temperatura,"66,29",°C,MAÑANA
+2026-09-26 10:00:00,MOT-C-005,Vibración,2.65,mm/seg,Mañana
+2026-09-26 10:00:00,MEZ-C-006 ,temperatura,56.7,°C,Mañana
+2026-09-26 10:00:00,MEZC006,vibr,3.64,mm/seg,Mañana
+2026-09-26 18:00:00,MOT-A-001,temperatura,61.25,°C,Tarde
+2026-09-26 18:00:00,MOT-A-001,vibracion,2.41,mm/s,Tarde
+2026-09-26 18:00:00,BOM-A-002,temperatura,55.77,°C,Tarde
+2026-09-26 18:00:00,BOM-A-002,vibracion,"2,67",mm/s,TARDE
+2026-09-26 18:00:00,COM-B-003,temperatura,79.68,°C,Tarde
+2026-09-26 18:00:00,COM-B-003,vibracion,"5,11",mm/s,Tarde
+2026-09-26 18:00:00,MOT-B-004,temperatura,60.44,°C, Tarde
+2026-09-26 18:00:00,MOT-B-004,vibracion,2.82,MM/S,Tarde
+2026-09-26 18:00:00,MOT-C-005,temperatura,67.56,°C,Tarde
+2026-09-26 18:00:00,MOT-C-005,Vibración,2.65,mm/seg,Tarde
+26/09/2026 18:00,MEZ-C-006,,55.8,°C, Tarde
+2026-09-26 18:00:00,MEZ-C-006,vibracion,3.84,mm/s,Tarde
+2026-09-27 02:00:00,MOT-A-001,temperatura,63.31,°C,Noche
+2026-09-27 02:00:00,MOT-A-001,vibracion,2.1,mm/s,Noche
+2026-09-27 02:00:00,bom-a-002,Temperatura,"56,36",°C,Noche
+27/09/2026 02:00,BOM-A-002,vibracion,3.04,mm/s,Noche
+2026-09-27 02:00:00,COM-B-003,TEMP,80.47,,Noche
+2026-09-27 02:00:00,COM-B-003,VIBRACION,5.97,mm/s, Noche
+2026-09-27 02:00:00,MOT-B-004,temperatura ,58.32,°C,Noche
+2026-09-27 02:00:00,MOT-B-004,vibracion,2.06,mm/s,NOCHE
+2026-09-27 02:00:00,MOT-C-005,temperatura,154.1,°F, Noche
+2026-09-27 02:00:00,MOT-C-005 ,vibracion,3.15,mm/s,NOCHE
+27/09/2026 02:00,MEZ-C-006,temperatura,56.17,°C,Noche
+2026-09-27 02:00:00,MEZ-C-006 ,vibracion,3.49,mm/s,Noche
+2026-09-27 10:00:00, MOT-A-001,temperatura,62.28,°C,MAÑANA
+2026-09-27 10:00:00,MOT-A-001,vibracion,2.6,mm/s,Mañana
+2026-09-27 10:00:00,BOMA002,temperatura,54.78,,MAÑANA
+2026-09-27 10:00:00,BOM-A-002,vibracion,"3,42",mm/s,Mañana
+2026-09-27 10:00:00,COM-B-003,temperatura,80.34,,Mañana
+2026-09-27 10:00:00,COM-B-003,vibracion,5.82,MM/S,Mañana
+2026-09-27 10:00:00,MOT-B-004,temperatura,60.88,°C,Mañana
+2026-09-27 10:00:00,MOT_B_004,vibracion,2.16,mm/s,Mañana
+2026-09-27 10:00:00,MOT-C-005,temperatura,64.99,°C,
+27/09/2026 10:00,MOTC005,vibracion,N/A,mm/s,Mañana
+2026-09-27 10:00:00,MEZ-C-006,temperatura,N/A,°C,Mañana
+2026-09-27 10:00:00,MEZ-C-006,VIBRACION,3.44,mm/s,Mañana
+27/09/2026 18:00,MOT-A-001,temperatura,60.78,°C,Tarde
+2026-09-27 18:00:00,MOTA001,vibracion,"2,18",mm/s,Tarde
+2026-09-27 18:00:00,BOM-A-002,temperatura,54.52,°C,Tarde
+2026-09-27 18:00:00,BOM-A-002,vibracion,3.57,mm/s,Tarde
+2026-09-27 18:00:00,COM-B-003,temperatura,"79,07",°C,Tarde
+2026-09-27 18:00:00,COM-B-003,vibracion,5.91,mm/s,Tarde
+27/09/2026 18:00,MOT-B-004,temperatura ,59.96,°C,Tarde
+2026-09-27 18:00:00,MOT-B-004,Vibración,2.29,mm/s,TARDE
+2026-09-27 18:00:00,MOT-C-005,temperatura,63.28,°c,Tarde
+2026-09-27 18:00:00,MOT-C-005,vibracion,3.18,mm/s,Tarde
+27/09/2026 18:00,MEZ-C-006,Temperatura,58.26,C, Tarde
+2026-09-27 18:00:00,MEZ-C-006,Vibración,3.34,mm/s,
+2026-09-28 02:00:00,MOT-A-001,temperatura,62.67,°C,Noche
+28/09/2026 02:00,MOT-A-001,vibracion,2.41,mm/s, Noche
+2026-09-28 02:00:00,BOM-A-002,Temperatura,"55,76",°C,noche
+2026-09-28 02:00:00,bom-a-002,vibracion,3.12,mm/s,Noche
+2026-09-28 02:00:00,COM-B-003,temperatura,79.53,°C,Noche
+2026-09-28 02:00:00,COM-B-003,vibracion,"5,55",mm/seg,Noche
+28/09/2026 02:00,MOT-B-004,TEMP,61.28,°C,Noche
+28/09/2026 02:00,MOT_B_004,vibracion,2.11,mm/s,Noche
+28/09/2026 02:00,MOT-C-005,temperatura,66.38,°C,Noche
+28/09/2026 02:00,MOT-C-005 ,vibracion,2.56,mm/s,Noche
+2026-09-28 02:00:00,MEZ-C-006,temperatura,"56,83",°C,Noche
+2026-09-28 02:00:00,MEZ-C-006,vibracion,3.31,mm/s,Noche
+2026-09-28 10:00:00,MOT-A-001,temperatura,63.16,°c, Mañana
+2026-09-28 10:00:00,mot-a-001,vibracion,2.3,mm/s,Mañana
+2026-09-28 10:00:00,BOM_A_002,temperatura,"55,36",°C,Manana
+2026-09-28 10:00:00,BOM-A-002,vibracion,"3,37",mm/s,Mañana
+2026-09-28 10:00:00,COM-B-003,temperatura,83.35,°C,Mañana
+28/09/2026 10:00,COM-B-003,vibracion,5.78,MM/S,Mañana
+2026-09-28 10:00:00,MOT-B-004,temperatura,"58,84",°C,mañana
+28/09/2026 10:00,MOT-B-004,vibracion,1.74,mm/s,Mañana
+2026-09-28 10:00:00,MOT_C_005,temperatura,64.58,°C,Mañana
+2026-09-28 10:00:00,MOT_C_005,temperatura,64.58,°C,Mañana
+2026-09-28 10:00:00,MOT-C-005,vibracion,2.38,MM/S,Mañana
+28/09/2026 10:00,MEZ-C-006,temperatura,55.21,°C,MAÑANA
+2026-09-28 10:00:00, MEZ-C-006,vibracion,3.99,mm/s,Mañana
+2026-09-28 18:00:00,mot-a-001,Temperatura,60.48,ºC,Tarde
+28/09/2026 18:00,MOT-A-001,vibr,2.72,MM/S,Tarde
+28/09/2026 18:00,BOM-A-002,temperatura,54.7,ºC, Tarde
+2026-09-28 18:00:00,BOM-A-002,vibracion,3.12,mm/seg,TARDE
+28/09/2026 18:00,COM-B-003,temperatura ,79.88,°C, Tarde
+2026-09-28 18:00:00,COM-B-003,vibracion,--,mm/s,Tarde
+28/09/2026 18:00,MOT_B_004,temperatura,"62,6",°C,Tarde
+2026-09-28 18:00:00,MOT-B-004,vibracion,2.08,mm/s,Tarde
+2026-09-28 18:00:00,MOT-C-005,Temperatura,67.84,°C,Tarde
+2026-09-28 18:00:00,MOT-C-005,vibracion,3.2,mm/s,tarde
+2026-09-28 18:00:00,MOT-C-005,vibracion,3.2,mm/s,tarde
+2026-09-28 18:00:00,MEZ-C-006,temperatura,134.0,°F,Tarde
+2026-09-28 18:00:00,MEZ-C-006,vibracion,"4,09",mm/s,Tarde
+2026-09-29 02:00:00,MOT-A-001,temperatura,60.67,°C,Noche
+29/09/2026 02:00,MOT_A_001,vibracion,2.34,mm/seg,NOCHE
+29/09/2026 02:00,BOM-A-002,temperatura,127.0,°F,Noche
+2026-09-29 02:00:00,BOM-A-002,vibracion,2.95,mm/s,Noche
+2026-09-29 02:00:00,COM-B-003,temperatura,181.0,°F,noche
+2026-09-29 02:00:00,COM-B-003,vibracion,6.23,mm/s,Noche
+2026-09-29 02:00:00,MOTB004,Temperatura,60.57,°C,Noche
+2026-09-29 02:00:00,MOT-B-004,vibracion,2.29,mm/seg,Noche
+2026-09-29 02:00:00, MOT-C-005,temperatura,64.68,°C,Noche
+29/09/2026 02:00,MOT-C-005,vibracion,"3,19",mm/s,Noche
+2026-09-29 02:00:00,MEZ-C-006 ,temperatura,57.8,°C,Noche
+2026-09-29 02:00:00,MEZ-C-006,vibracion,3.55,mm/s,Noche
+2026-09-29 10:00:00,MOT-A-001,temperatura ,60.76,°C, Mañana
+2026-09-29 10:00:00,MOT-A-001,vibracion,"2,29",mm/s,Manana
+29/09/2026 10:00,BOM-A-002,temperatura,54.17,°C,Mañana
+29/09/2026 10:00,BOM-A-002,temperatura,54.17,°C,Mañana
+29/09/2026 10:00,BOM-A-002,vibracion,3.22,mm/s,Manana
+2026-09-29 10:00:00,COM-B-003,TEMP,80.27,,Mañana
+2026-09-29 10:00:00,COM-B-003,vibracion,"6,08",mm/s,Mañana
+2026-09-29 10:00:00,MOT-B-004,temperatura,--,°C, Mañana
+2026-09-29 10:00:00,MOT-B-004,vibracion,2.42,mm/seg,MAÑANA
+2026-09-29 10:00:00,MOT-C-005,temperatura,"64,15",°C,Mañana
+2026-09-29 10:00:00, MOT-C-005,,2.4,mm/s,Mañana
+29/09/2026 10:00,MEZ-C-006,temperatura,57.39,°C,Mañana
+2026-09-29 10:00:00,MEZ-C-006,vibracion,3.37,mm/s,
+2026-09-29 18:00:00,MOT-A-001,temperatura,143.5,°F,Tarde
+2026-09-29 18:00:00,MOT-A-001,Vibración,2.54,mm/s,
+2026-09-29 18:00:00, BOM-A-002,temperatura,999,C,Tarde
+2026-09-29 18:00:00, BOM-A-002,temperatura,999,C,Tarde
+29/09/2026 18:00,BOMA002,vibracion,3.13,mm/s,Tarde
+2026-09-29 18:00:00,COM-B-003,temperatura,80.04,°C,Tarde
+29/09/2026 18:00,COM-B-003,vibracion,6.03,mm/s,Tarde
+29/09/2026 18:00,MOT_B_004,temperatura,58.57,C,tarde
+29/09/2026 18:00,MOT-B-004,vibracion,2.75,mm/s,Tarde
+2026-09-29 18:00:00,MOT-C-005,temperatura,"63,61",°C,tarde
+2026-09-29 18:00:00,MOT-C-005,vibracion,2.63,mm/s,Tarde
+2026-09-29 18:00:00,MEZ-C-006,TEMP,55.95,°C,Tarde
+2026-09-29 18:00:00,MEZ-C-006,vibracion,"3,48",mm/s,Tarde
+2026-09-30 02:00:00,mot-a-001,temperatura,63.75,°C,Noche
+2026-09-30 02:00:00,MOT_A_001,vibracion,2.33,mm/s,Noche
+2026-09-30 02:00:00,BOM-A-002,temperatura,-40,°C,Noche
+30/09/2026 02:00,BOM-A-002 ,vibracion,3.45,mm/s,NOCHE
+2026-09-30 02:00:00,COM-B-003,temperatura,82.14,,Noche
+30/09/2026 02:00,COM-B-003,vibracion,5.93,mm/s,Noche
+30/09/2026 02:00,MOT-B-004,temperatura,"59,88",°C,Noche
+2026-09-30 02:00:00,MOT-B-004,vibracion,2.17,mm/s,Noche
+2026-09-30 02:00:00,MOT-C-005,Temperatura,N/A,°C,Noche
+30/09/2026 02:00,MOT_C_005,vibracion,"2,86",mm/s,Noche
+2026-09-30 02:00:00,MEZ-C-006,TEMP,60.22,°C,
+2026-09-30 02:00:00,MEZ-C-006,TEMP,60.22,°C,
+2026-09-30 02:00:00,MEZ-C-006,vibracion,3.53,mm/s,Noche
+2026-09-30 10:00:00,MOT-A-001,temperatura,64.22,°C,
+30/09/2026 10:00,MOT-A-001,vibracion,"1,96",MM/S,Mañana
+2026-09-30 10:00:00,BOM-A-002,temperatura,56.26,°C,
+2026-09-30 10:00:00,BOM-A-002,vibracion,2.96,mm/s,Mañana
+30/09/2026 10:00,COM-B-003,temperatura,85.74,°C,Mañana
+2026-09-30 10:00:00,COM-B-003,vibracion,6.06,mm/s,mañana
+2026-09-30 10:00:00,MOT-B-004,temperatura,60.31,°C,Manana
+2026-09-30 10:00:00,MOT-B-004,vibracion,2.67,mm/s,MAÑANA
+2026-09-30 10:00:00,mot-c-005,temperatura,65.44,°C, Mañana
+2026-09-30 10:00:00,MOT-C-005,vibracion,"3,04",mm/s,Mañana
+2026-09-30 10:00:00,MEZ-C-006,temperatura,"56,65",°C,MAÑANA
+2026-09-30 10:00:00,MEZ_C_006,vibracion,"3,88",mm/s,Mañana
+2026-09-30 18:00:00, MOT-A-001,Temperatura,60.38,°c,Tarde
+30/09/2026 18:00,MOT-A-001,vibracion,2.31,mm/s,Tarde
+30/09/2026 18:00,BOM-A-002,temperatura,999,°C,Tarde
+30/09/2026 18:00,BOM-A-002,vibracion,2.78,mm/s,tarde
+30/09/2026 18:00,COM-B-003,temperatura,82.9,°C,Tarde
+30/09/2026 18:00,com-b-003,temperatura,82.9,°C,Tarde
+2026-09-30 18:00:00,COM-B-003,vibracion,6.48,mm/s,TARDE
+30/09/2026 18:00,com-b-003,vibracion,6.48,mm/s,TARDE
+2026-09-30 18:00:00,MOT-B-004,temperatura,61.81,°C,Tarde
+30/09/2026 18:00,MOT-B-004,vibracion,"2,64",mm/s,Tarde
+2026-09-30 18:00:00,MOT-C-005,temperatura,68.62,C,Tarde
+2026-09-30 18:00:00,MOT-C-005,temperatura,68.62,C,Tarde
+2026-09-30 18:00:00,MOT-C-005,vibracion,,mm/s,Tarde
+2026-09-30 18:00:00,MEZ-C-006,temperatura,59.19,°c,
+30/09/2026 18:00,MEZ-C-006,vibracion,"3,27",mm/s,Tarde

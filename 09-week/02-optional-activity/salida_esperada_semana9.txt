@@ -1,0 +1,36 @@
+== 0. Lectura ingenua (read_csv por defecto) ==
+isna() ingenuo: 43 nulos; 'valor' queda como str (texto) porque hay '--' y comas decimales.
+
+== 1. ANTES ==
+{'filas': 379, 'nulos': 49, 'duplicados_exactos': 13, 'duplicados_clave': 19}
+  Completitud    97.8 %
+  Unicidad       95.0 %
+  Consistencia   35.9 %
+  Formato        62.8 %
+  Validez        91.5 %
+
+== 2. BITÁCORA ==
+  1. Normalizar texto (strip, mayúsculas, acentos, sinónimos): 379 -> 379 filas, 304 valores corregidos (equipo, tipo_medicion, unidad, turno)
+  2. Tipos: fecha_hora a datetime y valor a número (coma decimal): 379 -> 379 filas, 147 valores corregidos (89 fechas dd/mm/aaaa, 58 valores con coma)
+  3. Quitar duplicados por clave (fecha_hora, equipo, tipo_medicion): 379 -> 360 filas, 0 valores corregidos (13 exactos en el crudo + 6 que solo se ven tras normalizar)
+  4. Imputar por regla: unidad (desde tipo), tipo (desde unidad), turno (desde la hora): 360 -> 360 filas, 35 valores corregidos (unidad 12, tipo 8, turno 15)
+  5. Eliminar filas sin valor medido: 360 -> 348 filas, 0 valores corregidos (la medida no se imputa)
+  6. Convertir °F a °C: (°F − 32) × 5/9: 348 -> 348 filas, 12 valores corregidos (unidad declarada en la fila)
+  7. Apartar valores imposibles (fuera del rango físico del sensor): 348 -> 338 filas, 0 valores corregidos (temperatura 0–150 °C, vibración 0–50 mm/s)
+
+== 3. ANTES / DESPUÉS ==
+                        antes  despues
+filas                   379.0    338.0
+nulos                    49.0      0.0
+duplicados (exactos)     13.0      0.0
+duplicados (por clave)   19.0      0.0
+Completitud              97.8    100.0
+Unicidad                 95.0    100.0
+Consistencia             35.9    100.0
+Formato                  62.8    100.0
+Validez                  91.5    100.0
+
+Filas apartadas: 22 (12 sin valor, 10 fuera de rango). Quedan 338 filas.
+
+✔ Verificación: 338 filas limpias coinciden con el origen (error máximo en valor: 0.030; turno y unidad idénticos).
+  Del origen (360 filas) se perdieron 22: 12 sin valor y 10 con valor imposible.
