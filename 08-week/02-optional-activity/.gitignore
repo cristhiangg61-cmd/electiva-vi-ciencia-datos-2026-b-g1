@@ -1,0 +1,5 @@
+# Generados al ejecutar el mini-ETL
+clima.db
+salida_api.txt
+__pycache__/
+*.pyc

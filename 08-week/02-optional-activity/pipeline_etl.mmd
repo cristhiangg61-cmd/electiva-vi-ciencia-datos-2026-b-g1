@@ -1,0 +1,52 @@
+flowchart LR
+    subgraph F["1 · FUENTES"]
+        S1["Sensores IoT<br/>temperatura · vibración · corriente"]
+        S2["ERP / CMMS<br/>fallas y órdenes (SQL)"]
+        S3["Informes técnicos<br/>PDF y texto libre"]
+        S4["API pública del clima<br/>Open-Meteo (JSON)"]
+    end
+
+    subgraph E["2 · EXTRAER"]
+        E1["MQTT + Apache Kafka<br/>vía Siemens Insights Hub"]
+        E2["Apache Airflow + Python<br/>(requests, SQLAlchemy, pdfplumber)"]
+    end
+
+    subgraph T["3 · TRANSFORMAR"]
+        T1["Spark Structured Streaming<br/>validar · deduplicar · ventana de 1 min"]
+        T2["PySpark / pandas<br/>limpiar · homologar · modelo de riesgo"]
+    end
+
+    subgraph L["4 · CARGAR"]
+        L1[("Data lake · ADLS Gen2<br/>crudo en Parquet")]
+        L2[("Data warehouse<br/>PostgreSQL / Synapse<br/>11 tablas de la Semana 6<br/>+ clima_ambiente (propuesta)")]
+    end
+
+    subgraph B["5 · BI"]
+        B1["Power BI<br/>DirectQuery: operación<br/>Import: históricos"]
+    end
+
+    S1 --> E1
+    S2 --> E2
+    S3 --> E2
+    S4 --> E2
+    E1 --> T1
+    E2 --> T2
+    E1 -->|"copia cruda"| L1
+    E2 -->|"copia cruda"| L1
+    L1 -->|"histórico para el modelo"| T2
+    T1 ==>|"ruta rápida"| L2
+    T2 --> L2
+    L2 --> B1
+
+    classDef streaming fill:#fde8d0,stroke:#c2570c,color:#3b1d05
+    classDef batch fill:#d9e8f7,stroke:#1f5f99,color:#0d2a47
+    classDef almacen fill:#e4f1e0,stroke:#3b7d2c,color:#17361a
+    class E1,T1 streaming
+    class E2,T2 batch
+    class L1,L2 almacen
+
+    linkStyle 4 stroke:#c2570c,stroke-width:2px
+    linkStyle 5 stroke:#1f5f99,stroke-width:2px
+    linkStyle 6,7,8 stroke:#3b7d2c,stroke-width:2px
+    linkStyle 9 stroke:#c2570c,stroke-width:4px
+    linkStyle 10 stroke:#1f5f99,stroke-width:2px
