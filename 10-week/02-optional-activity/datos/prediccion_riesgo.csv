@@ -1,0 +1,13 @@
+id_prediccion,id_equipo,fecha_calculo,probabilidad_falla,version_modelo
+1,1,2026-09-15 23:00:00,0.12,v0.1-ilustrativo
+2,1,2026-09-29 23:00:00,0.15,v0.1-ilustrativo
+3,2,2026-09-15 23:00:00,0.2,v0.1-ilustrativo
+4,2,2026-09-29 23:00:00,0.31,v0.1-ilustrativo
+5,3,2026-09-15 23:00:00,0.64,v0.1-ilustrativo
+6,3,2026-09-29 23:00:00,0.91,v0.1-ilustrativo
+7,4,2026-09-15 23:00:00,0.08,v0.1-ilustrativo
+8,4,2026-09-29 23:00:00,0.1,v0.1-ilustrativo
+9,5,2026-09-15 23:00:00,0.38,v0.1-ilustrativo
+10,5,2026-09-29 23:00:00,0.52,v0.1-ilustrativo
+11,6,2026-09-15 23:00:00,0.55,v0.1-ilustrativo
+12,6,2026-09-29 23:00:00,0.78,v0.1-ilustrativo

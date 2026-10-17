@@ -1,0 +1,10 @@
+metrica,antes,despues
+filas,379.0,338.0
+nulos,49.0,0.0
+duplicados_exactos,13.0,0.0
+duplicados_clave,19.0,0.0
+Completitud,97.8,100.0
+Unicidad,95.0,100.0
+Consistencia,35.9,100.0
+Formato,62.8,100.0
+Validez,91.5,100.0

@@ -1,0 +1,34 @@
+[1/4 EXTRAER] lecturas_sucias.csv: 379 filas x 6 columnas · maestros: linea_produccion (3), tipo_medicion (2), equipo (6), sensor (12), prediccion_riesgo (12)
+[2/4 LIMPIAR] 379 -> 338 filas · nulos 49 -> 0 · duplicados por clave 19 -> 0
+    paso 1: Normalizar texto (strip, mayúsculas, acentos, sinónimos): 379 -> 379 filas, 304 corregidos
+    paso 2: Tipos: fecha_hora a datetime y valor a número: 379 -> 379 filas, 147 corregidos
+    paso 3: Quitar duplicados por clave (fecha_hora, equipo, tipo_medicion): 379 -> 360 filas, 0 corregidos
+    paso 4: Imputar por regla: unidad, tipo y turno: 360 -> 360 filas, 35 corregidos
+    paso 5: Eliminar filas sin valor medido: 360 -> 348 filas, 0 corregidos
+    paso 6: Convertir °F a °C: 348 -> 348 filas, 12 corregidos
+    paso 7: Apartar valores imposibles: 348 -> 338 filas, 0 corregidos
+    calidad (antes -> después): Completitud 97.8->100.0 · Unicidad 95.0->100.0 · Consistencia 35.9->100.0 · Formato 62.8->100.0 · Validez 91.5->100.0
+[3/4 CARGAR] ERD de la Semana 6 en SQLite · filas por tabla: linea_produccion 3, tipo_medicion 2, equipo 6, sensor 12, lectura_sensor 338, prediccion_riesgo 12
+    rechazada: lectura duplicada (UNIQUE id_sensor, fecha_hora) -> UNIQUE constraint failed: lectura_sensor.id_sensor, lectura_sensor.fecha_hora
+    rechazada: lectura de un sensor inexistente (FK) -> FOREIGN KEY constraint failed
+[4/4 ANALIZAR] datos listos: salida/lecturas_listas.csv (338 filas) y mantenimiento_s10.db
+
+--- Q1 · Temperatura por equipo (WHERE tipo = temperatura + GROUP BY equipo) ---
+   equipo  n_lecturas  temp_promedio  temp_maxima  n_sobre_70  pct_sobre_70
+COM-B-003          29          78.46        85.74          29         100.0
+MOT-C-005          28          65.61        68.62           0           0.0
+MOT-A-001          30          61.93        65.43           0           0.0
+MOT-B-004          27          59.79        62.96           0           0.0
+MEZ-C-006          28          57.85        62.00           0           0.0
+BOM-A-002          26          54.80        57.03           0           0.0
+
+--- Q2 · Vibración frente al riesgo del modelo (WHERE tipo = vibración + JOIN v_riesgo_actual + GROUP BY) ---
+   equipo nivel_riesgo  probabilidad_falla  n_lecturas  vib_promedio  vib_maxima
+COM-B-003         Alto                0.91          28          5.49        6.48
+MEZ-C-006         Alto                0.78          30          3.52        4.09
+BOM-A-002         Bajo                0.31          29          3.16        3.61
+MOT-C-005        Medio                0.52          26          2.87        3.22
+MOT-A-001         Bajo                0.15          28          2.36        2.74
+MOT-B-004         Bajo                0.10          29          2.27        2.82
+
+✔ Verificación: Q1 y Q2 en SQL coinciden con su versión en pandas.

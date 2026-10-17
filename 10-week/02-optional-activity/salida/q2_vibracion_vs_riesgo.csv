@@ -1,0 +1,7 @@
+equipo,nivel_riesgo,probabilidad_falla,n_lecturas,vib_promedio,vib_maxima
+COM-B-003,Alto,0.91,28,5.49,6.48
+MEZ-C-006,Alto,0.78,30,3.52,4.09
+BOM-A-002,Bajo,0.31,29,3.16,3.61
+MOT-C-005,Medio,0.52,26,2.87,3.22
+MOT-A-001,Bajo,0.15,28,2.36,2.74
+MOT-B-004,Bajo,0.1,29,2.27,2.82
