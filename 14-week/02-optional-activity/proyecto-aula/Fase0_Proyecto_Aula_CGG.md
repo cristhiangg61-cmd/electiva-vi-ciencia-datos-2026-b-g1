@@ -16,7 +16,6 @@
 
 | Criterio | Café (elegida) | Lácteos Garzón | Centro de distribución Neiva |
 |---|---|---|---|
-| **Fácil de sustentar en 4 minutos** | Sí: un solo indicador con definición oficial | Sí | Sí |
 | **Aplicación práctica regional** | Alta: Huila es zona cafetera y el factor define cuánto vale un lote | Media | Media |
 | **Se parece a algo ya hecho** | No | **Sí**: «merma por línea y turno» es casi el taller de la planta de empaques (defectos por máquina y turno) | **Prohibida**: es la Distribuidora La Ceiba del parcial |
 | **Riesgo de coincidir con otro proyecto** | Medio: está en la lista de la guía | Alto: es el ejemplo del título de la guía | — |
@@ -98,8 +97,6 @@ La revisión de la Fase 0 era el sábado 31 de octubre y ya pasó; los hitos **n
 | Cuaderno `Proyecto_Aula_CGG.ipynb` | Ejecutado completo sin errores; guardado con sus salidas (ficha de 9 campos y ejemplo del KPI) |
 | Definición del factor, referencia de 94 y humedad de 10 %–12 % | Contrastadas con fuentes del sector [1]–[4] (búsqueda del 3 de noviembre de 2026) |
 | **No verificado** | Que los supuestos del generador (24 proveedores, 150 lotes al mes, qué proveedores o meses son «malos») sean realistas: son inventados y se documentan en la Fase 1; que al trillar **cada lote por separado** se pese el excelso (así lo asumo para poder calcular el KPI con totales); que el factor base de 94 siga vigente en la fecha de la sustentación |
-
-Lo asumido está listado, con cómo cambiarlo, en **`PARTES_POR_CAMBIAR.md`**.
 
 ## Referencias
 
