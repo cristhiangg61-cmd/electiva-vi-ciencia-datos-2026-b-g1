@@ -1,0 +1,85 @@
+Filas, columnas: (4384, 6) | rango: 2023-01-01 -> 2025-12-31
+            paradas   horas  temp_media    kpi    mm3  mm12
+fecha                                                      
+2023-01-01       11  2513.2       58.34   4.38    NaN   NaN
+2023-02-01        6  2225.8       58.97   2.70    NaN   NaN
+2023-03-01       13  2442.8       59.85   5.32   4.13   NaN
+2023-04-01       13  2423.3       62.10   5.36   4.46   NaN
+2023-05-01       15  2491.1       63.97   6.02   5.57   NaN
+2023-06-01       20  2392.8       65.67   8.36   6.58   NaN
+2023-07-01       30  2488.6       66.24  12.05   8.81   NaN
+2023-08-01       28  2432.3       65.79  11.51  10.64   NaN
+2023-09-01       15  2390.6       64.40   6.27   9.95   NaN
+2023-10-01       15  2478.4       62.73   6.05   7.95   NaN
+2023-11-01       12  2401.5       60.42   5.00   5.77   NaN
+2023-12-01       11  2468.6       59.00   4.46   5.17  6.46
+2024-01-01       12  2460.6       58.37   4.88   4.78  6.50
+2024-02-01       12  2284.5       58.84   5.25   4.86  6.71
+2024-03-01       16  2455.6       59.91   6.52   5.55  6.81
+2024-04-01       18  2386.9       61.92   7.54   6.44  6.99
+2024-05-01       24  2466.4       63.97   9.73   7.93  7.30
+2024-06-01       20  2376.3       65.49   8.42   8.56  7.31
+2024-07-01       23  2508.6       66.32   9.17   9.11  7.07
+2024-08-01       26  2487.6       65.91  10.45   9.35  6.98
+2024-09-01       21  2412.5       64.51   8.70   9.44  7.18
+2024-10-01       14  2479.3       62.35   5.65   8.27  7.15
+2024-11-01       14  2407.3       60.38   5.82   6.72  7.21
+2024-12-01       17  2460.0       59.07   6.91   6.12  7.42
+2025-01-01       10  2498.8       58.32   4.00   5.58  7.35
+2025-02-01       16  2208.5       58.86   7.24   6.05  7.51
+2025-03-01        8  2502.5       59.97   3.20   4.81  7.24
+2025-04-01       23  2374.0       61.98   9.69   6.71  7.41
+2025-05-01       25  2485.1       63.91  10.06   7.65  7.44
+2025-06-01       23  2385.9       65.67   9.64   9.80  7.54
+2025-07-01       29  2504.7       66.09  11.58  10.43  7.74
+2025-08-01       26  2481.7       65.81  10.48  10.56  7.75
+2025-09-01       25  2427.7       64.39  10.30  10.78  7.88
+2025-10-01       23  2467.7       62.42   9.32  10.03  8.19
+2025-11-01       22  2377.6       60.59   9.25   9.62  8.47
+2025-12-01       14  2437.5       58.88   5.74   8.11  8.38
+
+KPI medio por año:
+ fecha
+2023    6.46
+2024    7.42
+2025    8.38
+Pendiente simple: 1.11 | pendiente controlando el mes: 0.96 paradas/1000h por año
+
+Índice estacional por mes (destendenciado):
+ fecha
+1     0.64
+2     0.70
+3     0.72
+4     1.03
+5     1.17
+6     1.20
+7     1.49
+8     1.46
+9     1.10
+10    0.90
+11    0.85
+12    0.73
+Mes pico: 7 1.49 | mes valle: 1 0.64
+Correlación mensual KPI vs temperatura media: 0.79
+
+KPI por motor:
+            p        h    kpi
+motor                       
+Motor A   95  21770.3   4.36
+Motor B  139  21932.4   6.34
+Motor C  161  21901.5   7.35
+Motor D  255  21882.1  11.65 
+Planta: 7.43
+
+Filas devueltas (ambas): 48 | resultados idénticos: sí
+
+PLAN ANTES: ['SCAN lecturas', 'USE TEMP B-TREE FOR GROUP BY']
+PLAN DESPUÉS (solo reescritura): ['SCAN lecturas', 'USE TEMP B-TREE FOR GROUP BY']
+PLAN DESPUÉS (reescritura + índice cubriente): ['SEARCH lecturas USING COVERING INDEX idx_lecturas_fecha_cubre (fecha>? AND fecha<?)', 'USE TEMP B-TREE FOR GROUP BY']
+Tiempo (mediana): antes 2.161 ms | reescrita 1.024 ms | reescrita+índice 1.095 ms
+Mejora total: 2.0x
+Filas totales: 4384 | filas de 2025: 1460
+
+ESCALA (263,040 filas) - plan antes: ['SCAN lecturas', 'USE TEMP B-TREE FOR GROUP BY']
+ESCALA plan con indice: ['SEARCH lecturas USING COVERING INDEX idx_lecturas_fecha_cubre (fecha>? AND fecha<?)', 'USE TEMP B-TREE FOR GROUP BY']
+ESCALA tiempo (mediana): antes 141.7 ms | reescrita 78.2 ms | reescrita+indice 63.4 ms | mejora 2.2x
